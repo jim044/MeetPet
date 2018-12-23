@@ -24,17 +24,17 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         public static final int DATABASE_VERSION = 1;
 
         // The table Name
-        public static final String MY_TABLE = "Human";
+        public static final String MY_TABLE = "Pet";
 
         // ## Column name ##
         // My Column ID and the associated explanation for end-users
-        public static final String KEY_COL_ID = "_id";// Mandatory
+        public static final String KEY_COL_ID = "id";// Mandatory
 
         // My Column Name and the associated explanation for end-users
         public static final String KEY_COL_NAME = "name";
 
         // My Column First Name and the associated explanation for end-users
-        public static final String KEY_COL_FIRSTNAME = "firstName";
+        public static final String KEY_COL_RACE = "race";
 
         // My Column Eyes Color and the associated explanation for end-users
         public static final String KEY_COL_EYES_COLOR = "eyesColor";
@@ -45,6 +45,8 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         // My Column age and the associated explanation for end-users
         public static final String KEY_COL_AGE = "age";
 
+        public static final String KEY_COL_LIEN_IMAGE = "lien_image";
+
         // Indexes des colonnes
         // The index of the column ID
         public static final int ID_COLUMN = 1;
@@ -53,7 +55,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
         public static final int NAME_COLUMN = 2;
 
         // The index of the column FIRST NAME
-        public static final int FIRSTNAME_COLUMN = 3;
+        public static final int RACE_COLUMN = 3;
 
         // The index of the column EYES COLOR
         public static final int EYES_COLOR_COLUMN = 4;
@@ -63,6 +65,8 @@ public class DBOpenHelper extends SQLiteOpenHelper {
 
         // The index of the column AGE
         public static final int AGE_COLUMN = 6;
+
+        public static final int LIEN_IMAGE_COLUMN = 7;
     }
 
     /**
@@ -72,9 +76,10 @@ public class DBOpenHelper extends SQLiteOpenHelper {
             + Constants.MY_TABLE + "(" + Constants.KEY_COL_ID
             + " integer primary key autoincrement, " + Constants.KEY_COL_AGE
             + " INTEGER, " + Constants.KEY_COL_NAME + " TEXT, "
-            + Constants.KEY_COL_FIRSTNAME + " TEXT, "
+            + Constants.KEY_COL_RACE + " TEXT, "
             + Constants.KEY_COL_EYES_COLOR + " TEXT, "
-            + Constants.KEY_COL_HAIR_COLOR + " TEXT) ";
+            + Constants.KEY_COL_HAIR_COLOR + " TEXT, "
+            + Constants.KEY_COL_LIEN_IMAGE + " TEXT) ";
 
     /**
      * @param context
